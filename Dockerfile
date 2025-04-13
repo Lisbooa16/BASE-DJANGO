@@ -6,6 +6,9 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /app
 
+# Instalar o netcat-openbsd
+RUN apt-get update && apt-get install -y netcat-openbsd
+
 COPY requirements.txt .
 
 RUN pip install --upgrade pip
